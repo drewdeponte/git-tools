@@ -23,7 +23,7 @@ EXAMPLE_BRANCH_NAME="WEB-2342342_add_health_endpoint"
 # exclude from being required to have a JIRA issue in its name. This generally
 # includes things like the "master" branch or "develop" branch, etc. This might
 # also be release branches for example.
-EXCLUSION_BRANCHE_PATTERNS=("^master$" "^develop$" "^release/.+$")
+EXCLUSION_BRANCH_PATTERNS=("^master$" "^develop$" "^release/.+$")
 
 #### Implementation ####
 
@@ -112,7 +112,7 @@ function main {
   local current_branch=$(get_current_branch)
   if [ "$current_branch" ]; then
 
-    for exclusion_branch_pattern in "${EXCLUSION_BRANCHE_PATTERNS[@]}"; do
+    for exclusion_branch_pattern in "${EXCLUSION_BRANCH_PATTERNS[@]}"; do
       if [[ "$current_branch" =~ $exclusion_branch_pattern ]]; then
         exit 0
       fi
