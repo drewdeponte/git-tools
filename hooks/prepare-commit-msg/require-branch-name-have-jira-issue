@@ -35,7 +35,7 @@
 
 # This is the base url that is combined with the JIRA issue identifier to create
 # a proper link for the issue. Note: The trailing slash IS NEEDED.
-JIRA_ISSUE_BASE_URL="https://autogravity.atlassian.net/browse/"
+JIRA_ISSUE_BASE_URL="https://yourcompany.atlassian.net/browse/"
 
 # This is used for education purposes. It should be an example of what a good
 # branch name should look like given your branch naming scheme.
