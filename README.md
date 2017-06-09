@@ -22,3 +22,20 @@ they do a fresh clone of the repository.
 
 The above tells Git to look inside the `hooks` directory within the project for
 the hooks rather than the default `.git/hooks` directory.
+
+## License
+
+These Git tools are Copyright © 2017 UpTech Works, LLC. They are free software,
+and may be redistributed under the terms specified in the LICENSE file.
+
+## About ![uptech](http://upte.ch/img/logo.png)
+
+These Git tools are maintained [UpTech Works, LLC][uptech], a software design &
+development agency & consultancy.
+
+We love open source software. See [our other projects][community] or
+[hire us][hire] to design, develop, and grow your product.
+
+[community]: https://github.com/uptech
+[hire]: http://upte.ch
+[uptech]: http://upte.ch
