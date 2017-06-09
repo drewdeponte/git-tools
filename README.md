@@ -4,16 +4,32 @@ This repository houses random git tools that we have whip'd up over time.
 
 ## Hooks
 
-The files in the `hooks` directory are Git hooks. Normally these would get
-placed in you `project_dir/.git/hooks` directory with the correct name depending
-on the position in the life cycle you want to hook into.
+Our Git Hooks all live in the `hooks` directory. They are organized by Git
+life cycle name that they are intended to work for, ex.
+`hooks/prepare-commit-msg` holds all the Git Hooks that are intended to work in
+the `prepare-commit-msg` life cycle stage.
 
-This is great if it is just your own individual standards that you are trying to
-enforce. However, if it is a cross-team standard that you are trying to enforce
-you need to create a `project_dir/hooks` directory and place the hook files in
-that directory with the correct name. This allows you to commit the hooks to
-source control so that it is in lock step with standards of the team as they
-evolve.
+The names of the files try to communicate what the hooks do at a high level.
+
+### Installing Hooks
+
+There are two general use cases for installing.
+
+#### Personal Use
+
+In this case simply need to copy the hook file into your projects
+`.git/hooks/<stage name>` with the life cycle stage name. For example if you
+wanted to install the `require-branch-name-have-jira-issue` hook you would copy
+that file into `.git/hooks/prepare-commit-msg`.
+
+#### Team Use
+
+In this case we recommend you create a `hooks` directory at the root of your
+project and copy the hook script into that directory with the appropriate life
+cycle name. You can then stage and commit this hooks directory so that it stays
+in lock step with the code base. This is great because as the hook changes as
+the process changes over time it is automatically updated with a developer
+pulls.
 
 You also need to have each of the team members run the following command after
 they do a fresh clone of the repository.
