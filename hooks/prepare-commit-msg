@@ -123,8 +123,6 @@ function main {
       insert_jira_issue_links_into_commit_message "$jira_issues" "$commit_msg_file"
       exit 0
     else
-      echo "tix please!"
-      echo
       echo "Branch '${current_branch}' needs to include a JIRA issue."
       echo "  ex: ${EXAMPLE_BRANCH_NAME}"
       echo
