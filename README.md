@@ -39,6 +39,11 @@ they do a fresh clone of the repository.
 The above tells Git to look inside the `hooks` directory within the project for
 the hooks rather than the default `.git/hooks` directory.
 
+We have also provided a script `setup_and_update_hooks` that is intended to be
+copied and committed into the root of your project's Git repo, and then executed
+to setup the Git hooks and the repositories Git configuration. This is simply a
+nice to have to help streamline things a tiny bit more.
+
 ## License
 
 These Git tools are Copyright © 2017 UpTech Works, LLC. They are free software,
