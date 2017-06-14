@@ -25,7 +25,14 @@
 # This is a script which is intended to be run from the root of the project that
 # you want to setup the Git hooks in.
 
+PREPARE_COMMIT_MSG_URL=https://raw.githubusercontent.com/uptech/git-tools/master/hooks/prepare-commit-msg/require-branch-name-have-jira-issue
+
+# Setup hooks directory in the repository
 mkdir -p hooks
-curl https://raw.githubusercontent.com/uptech/git-tools/master/hooks/prepare-commit-msg/require-branch-name-have-jira-issue -s -o hooks/prepare-commit-msg
-chmod u+x hooks/prepare-commit-msg
+
+# Configure git repository to look for hooks in hooks
 git config core.hooksPath hooks
+
+# Download prepare commit hook and set perms on hooks
+curl $PREPARE_COMMIT_MSG_URL -s -o hooks/prepare-commit-msg
+chmod u+x hooks/prepare-commit-msg
